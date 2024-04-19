@@ -1,6 +1,6 @@
 from aiogram.types import ReplyKeyboardRemove, ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMarkup, InlineKeyboardButton
 
-menu_kb = ReplyKeyboardMarkup(resize_keyboard=True)
+menu_kb = ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
 
 help_b = KeyboardButton("/help")
 about_b = KeyboardButton("О боте")

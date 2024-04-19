@@ -1,8 +1,10 @@
 from aiogram import Bot,Dispatcher,types, executor
+from aiogram.types import ReplyKeyboardRemove
 from aiogram.types import InputFile
 from config import TOKEN
 from text import *
 from keyboards import *
+import time
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher(bot=bot)
@@ -32,6 +34,7 @@ async def otv2def(msg:types.Message):
 @dp.message_handler(text="3")
 async def otv3def(msg:types.Message):
     await bot.send_photo(chat_id=msg.chat.id, photo=skrinpic, caption=otv3)
+    ReplyKeyboardRemove(menu_kb)
 
 @dp.message_handler(text="4")
 async def otv4def(msg:types.Message):
@@ -40,6 +43,7 @@ async def otv4def(msg:types.Message):
 @dp.message_handler(text="5")
 async def otv5def(msg:types.Message):
     await msg.answer(otv5)
+    ReplyKeyboardRemove(menu_kb)
 
 @dp.message_handler(text="6")
 async def otv6def(msg:types.Message):
@@ -75,19 +79,19 @@ async def otv13def(msg:types.Message):
 
 @dp.message_handler(text="14")
 async def otv14def(msg:types.Message):
+    time.sleep(5)
     await bot.send_photo(chat_id=msg.chat.id, photo=otvpic, caption=otv14)
 
 @dp.message_handler(text="15")
 async def otv15def(msg:types.Message):
     await msg.answer(otv15)
-
 @dp.message_handler(commands="help")
 async def help(msg:types.Message):
     await bot.send_photo(chat_id=msg.chat.id, photo=pomoshpic, caption=helpdef)
 
 @dp.message_handler(text="О боте")
 async def avtor_b(msg:types.Message):
-    await bot.send_photo(chat_id=msg.chat.id, photo=o_botepic, caption=avtor)
+    await bot.send_photo(chat_id=msg.chat.id, photo=o_botepic, caption=avtor, reply_markup=menu_kb2)
 
 if __name__ == "__main__":
     executor.start_polling(dp, skip_updates=True)
