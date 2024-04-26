@@ -15,3 +15,9 @@ channel_b = InlineKeyboardButton(text="Подписаться на канал р
 bot_b = InlineKeyboardButton(text="Не нашли нужный вопрос?", url="http://t.me/KomaruStudios_bot")
 
 menu_kb2.add(channel_b,bot_b)
+
+menu_kb3 = InlineKeyboardMarkup(row_width=1)
+
+b_5 = InlineKeyboardButton(text=" ответ",callback_data="random_num")
+
+menu_kb3.add(b_5)

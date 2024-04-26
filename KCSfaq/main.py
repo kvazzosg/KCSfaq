@@ -21,7 +21,7 @@ async def hello(msg:types.Message):
 
 @dp.message_handler(text="FAQ")
 async def faqdef(msg:types.Message):
-    await bot.send_photo(chat_id=msg.chat.id, photo=voprospic, caption=faq)
+    await bot.send_photo(chat_id=msg.chat.id, photo=voprospic, caption=faq, reply_markup=menu_kb3)
 
 @dp.message_handler(text="1")
 async def otv1def(msg:types.Message):
@@ -92,6 +92,18 @@ async def help(msg:types.Message):
 @dp.message_handler(text="О боте")
 async def avtor_b(msg:types.Message):
     await bot.send_photo(chat_id=msg.chat.id, photo=o_botepic, caption=avtor, reply_markup=menu_kb2)
+
+
+@dp.message_handler(commands=["random", "рандом"])
+async def random_cmd(msg: types.Message):
+    await msg.answer(text="Нажми на кнопку!!!", reply_markup=menu_kb3)
+
+
+#@dp.callback_query_handler(text="random_num")
+#async def randomnum(call: types.callback_query):
+#    num = random.randint(1,10)
+#    await call.message.answer(str(num), reply_markup=menu_kb2)
+#    await call.answer()
 
 if __name__ == "__main__":
     executor.start_polling(dp, skip_updates=True)
