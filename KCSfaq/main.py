@@ -17,15 +17,14 @@ otvpic = InputFile("logo_otv14.png")
 
 @dp.message_handler(commands="start")
 async def hello(msg:types.Message):
-    await bot.send_photo(chat_id=msg.chat.id, photo=startpic, caption=start, reply_markup=menu_kb)
-
-@dp.message_handler(text="FAQ")
-async def faqdef(msg:types.Message):
+    await bot.send_photo(chat_id=msg.chat.id, photo=InputFile("KCSlogo.png"), caption=start)
     await bot.send_photo(chat_id=msg.chat.id, photo=voprospic, caption=faq, reply_markup=menu_kb3)
 
-@dp.message_handler(text="1")
-async def otv1def(msg:types.Message):
-    await msg.answer(otv1)
+
+@dp.callback_query_handler(text="1")
+async def otv1def(call: types.CallbackQuery):
+    await call.message.answer(text=otv1, reply_markup=menu_otv1)
+    await call.answer()
 
 @dp.message_handler(text="2")
 async def otv2def(msg:types.Message):
@@ -85,23 +84,23 @@ async def otv14def(msg:types.Message):
 @dp.message_handler(text="15")
 async def otv15def(msg:types.Message):
     await msg.answer(otv15)
+
 @dp.message_handler(commands="help")
 async def help(msg:types.Message):
-    await bot.send_photo(chat_id=msg.chat.id, photo=pomoshpic, caption=helpdef)
+    await bot.send_photo(chat_id=msg.chat.id, photo=pomoshpic, caption=helpdef, reply_markup=menu_kb2)
 
 @dp.message_handler(text="О боте")
 async def avtor_b(msg:types.Message):
-    await bot.send_photo(chat_id=msg.chat.id, photo=o_botepic, caption=avtor, reply_markup=menu_kb2)
+    await bot.send_photo(chat_id=msg.chat.id, photo=o_botepic, caption=avtor)
 
 
-@dp.message_handler(commands=["random", "рандом"])
-async def random_cmd(msg: types.Message):
-    await msg.answer(text="Нажми на кнопку!!!", reply_markup=menu_kb3)
+#@dp.message_handler(commands=["random", "рандом"])
+#async def random_cmd(msg: types.Message):
+#    await msg.answer(text="Нажми на кнопку!!!", reply_markup=menu_kb3)
 
 
 #@dp.callback_query_handler(text="random_num")
 #async def randomnum(call: types.callback_query):
-#    num = random.randint(1,10)
 #    await call.message.answer(str(num), reply_markup=menu_kb2)
 #    await call.answer()
 
