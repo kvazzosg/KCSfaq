@@ -17,92 +17,117 @@ otvpic = InputFile("logo_otv14.png")
 
 @dp.message_handler(commands="start")
 async def hello(msg:types.Message):
-    await bot.send_photo(chat_id=msg.chat.id, photo=InputFile("KCSlogo.png"), caption=start)
-    await bot.send_photo(chat_id=msg.chat.id, photo=voprospic, caption=faq, reply_markup=menu_kb3)
+    await bot.send_photo(chat_id=msg.chat.id, photo=InputFile("chast_vopros.png"), caption=faq, reply_markup=menu_kb3)
+
+@dp.callback_query_handler(text="faq")
+async def otv4def(call: types.CallbackQuery):
+    await bot.send_photo(chat_id=call.from_user.id, photo=InputFile("chast_vopros.png"), caption=faq, reply_markup=menu_kb3)
+    await call.answer()
+    await bot.delete_message(chat_id=call.from_user.id, message_id=call.message.message_id)
 
 
 @dp.callback_query_handler(text="1")
 async def otv1def(call: types.CallbackQuery):
     await call.message.answer(text=otv1, reply_markup=menu_otv1)
     await call.answer()
+    await bot.delete_message(chat_id=call.from_user.id, message_id=call.message.message_id)
 
-@dp.message_handler(text="2")
-async def otv2def(msg:types.Message):
-    await msg.answer(otv2)
+@dp.callback_query_handler(text="2")
+async def otv2def(call: types.CallbackQuery):
+    await call.message.answer(text=otv2, reply_markup=menu_otv2)
+    await call.answer()
+    await bot.delete_message(chat_id=call.from_user.id, message_id=call.message.message_id)
 
-@dp.message_handler(text="3")
-async def otv3def(msg:types.Message):
-    await bot.send_photo(chat_id=msg.chat.id, photo=skrinpic, caption=otv3)
-    ReplyKeyboardRemove(menu_kb)
+@dp.callback_query_handler(text="3")
+async def otv3def(call: types.CallbackQuery):
+    await bot.send_photo(chat_id=call.from_user.id, photo=InputFile("rofl.png"), caption=otv3, reply_markup=menu_otv3)
+    await call.answer()
+    await bot.delete_message(chat_id=call.from_user.id, message_id=call.message.message_id)
 
-@dp.message_handler(text="4")
-async def otv4def(msg:types.Message):
-    await msg.answer(otv4)
+@dp.callback_query_handler(text="4")
+async def otv4def(call: types.CallbackQuery):
+    await call.message.answer(text=otv4, reply_markup=menu_otv4)
+    await call.answer()
+    await bot.delete_message(chat_id=call.from_user.id, message_id=call.message.message_id)
 
-@dp.message_handler(text="5")
-async def otv5def(msg:types.Message):
-    await msg.answer(otv5)
-    ReplyKeyboardRemove(menu_kb)
+@dp.callback_query_handler(text="5")
+async def otv5def(call: types.CallbackQuery):
+    await call.message.answer(text=otv5, reply_markup=menu_otv5)
+    await call.answer()
+    await bot.delete_message(chat_id=call.from_user.id, message_id=call.message.message_id)
 
-@dp.message_handler(text="6")
-async def otv6def(msg:types.Message):
-    await msg.answer(otv6)
+@dp.callback_query_handler(text="6")
+async def otv6def(call: types.CallbackQuery):
+    await call.message.answer(text=otv6, reply_markup=menu_otv6)
+    await call.answer()
+    await bot.delete_message(chat_id=call.from_user.id, message_id=call.message.message_id)
 
-@dp.message_handler(text="7")
-async def otv7def(msg:types.Message):
-    await msg.answer(otv7)
+@dp.callback_query_handler(text="7")
+async def otv7def(call: types.CallbackQuery):
+    await call.message.answer(text=otv7, reply_markup=menu_otv7)
+    await call.answer()
+    await bot.delete_message(chat_id=call.from_user.id, message_id=call.message.message_id)
 
-@dp.message_handler(text="8")
-async def otv8def(msg:types.Message):
-    await msg.answer(otv8)
+@dp.callback_query_handler(text="8")
+async def otv8def(call: types.CallbackQuery):
+    await call.message.answer(text=otv8, reply_markup=menu_otv8)
+    await call.answer()
+    await bot.delete_message(chat_id=call.from_user.id, message_id=call.message.message_id)
 
-@dp.message_handler(text="9")
-async def otv9def(msg:types.Message):
-    await msg.answer(otv9)
+@dp.callback_query_handler(text="9")
+async def otv9def(call: types.CallbackQuery):
+    await call.message.answer(text=otv9, reply_markup=menu_otv9)
+    await call.answer()
+    await bot.delete_message(chat_id=call.from_user.id, message_id=call.message.message_id)
 
-@dp.message_handler(text="10")
-async def otv10def(msg:types.Message):
-    await msg.answer(otv10)
+@dp.callback_query_handler(text="10")
+async def otv10def(call: types.CallbackQuery):
+    await call.message.answer(text=otv10, reply_markup=menu_otv10)
+    await call.answer()
+    await bot.delete_message(chat_id=call.from_user.id, message_id=call.message.message_id)
 
-@dp.message_handler(text="11")
-async def otv11def(msg:types.Message):
-    await msg.answer(otv11)
+@dp.callback_query_handler(text="11")
+async def otv11def(call: types.CallbackQuery):
+    await call.message.answer(text=otv11, reply_markup=menu_otv11)
+    await call.answer()
+    await bot.delete_message(chat_id=call.from_user.id, message_id=call.message.message_id)
 
-@dp.message_handler(text="12")
-async def otv12def(msg:types.Message):
-    await msg.answer(otv12)
+@dp.callback_query_handler(text="12")
+async def otv12def(call: types.CallbackQuery):
+    await call.message.answer(text=otv12, reply_markup=menu_otv12)
+    await call.answer()
+    await bot.delete_message(chat_id=call.from_user.id, message_id=call.message.message_id)
 
-@dp.message_handler(text="13")
-async def otv13def(msg:types.Message):
-    await msg.answer(otv13)
+@dp.callback_query_handler(text="13")
+async def otv13def(call: types.CallbackQuery):
+    await call.message.answer(text=otv13, reply_markup=menu_otv13)
+    await call.answer()
+    await bot.delete_message(chat_id=call.from_user.id, message_id=call.message.message_id)
 
-@dp.message_handler(text="14")
-async def otv14def(msg:types.Message):
-    time.sleep(5)
-    await bot.send_photo(chat_id=msg.chat.id, photo=otvpic, caption=otv14)
+@dp.callback_query_handler(text="14")
+async def otv14def(call: types.CallbackQuery):
+    await bot.send_photo(chat_id=call.from_user.id, photo=InputFile("logo_otv14.png"), caption=otv14, reply_markup=menu_otv14)
+    await call.answer()
+    await bot.delete_message(chat_id=call.from_user.id, message_id=call.message.message_id)
 
-@dp.message_handler(text="15")
-async def otv15def(msg:types.Message):
-    await msg.answer(otv15)
+@dp.callback_query_handler(text="15")
+async def otv15def(call: types.CallbackQuery):
+    await call.message.answer(text=otv15, reply_markup=menu_otv15)
+    await call.answer()
+    await bot.delete_message(chat_id=call.from_user.id, message_id=call.message.message_id)
 
-@dp.message_handler(commands="help")
-async def help(msg:types.Message):
-    await bot.send_photo(chat_id=msg.chat.id, photo=pomoshpic, caption=helpdef, reply_markup=menu_kb2)
+@dp.callback_query_handler(text="/help")
+async def hepldef(call: types.CallbackQuery):
+    await bot.send_photo(chat_id=call.from_user.id, photo=InputFile("pomosh.png"), caption=help, reply_markup=menu_kb2)
+    await call.answer()
+    await bot.delete_message(chat_id=call.from_user.id, message_id=call.message.message_id)
 
-@dp.message_handler(text="О боте")
-async def avtor_b(msg:types.Message):
-    await bot.send_photo(chat_id=msg.chat.id, photo=o_botepic, caption=avtor)
+@dp.callback_query_handler(text="О боте")
+async def aboutdef(call: types.CallbackQuery):
+    await bot.send_photo(chat_id=call.from_user.id, photo=InputFile("o_bote.png"), caption=avtor, reply_markup=menu_o_bote)
+    await call.answer()
+    await bot.delete_message(chat_id=call.from_user.id, message_id=call.message.message_id)
 
-
-#@dp.message_handler(commands=["random", "рандом"])
-#async def random_cmd(msg: types.Message):
-#    await msg.answer(text="Нажми на кнопку!!!", reply_markup=menu_kb3)
-
-
-#@dp.callback_query_handler(text="random_num")
-#async def randomnum(call: types.callback_query):
-#    await call.message.answer(str(num), reply_markup=menu_kb2)
-#    await call.answer()
 
 if __name__ == "__main__":
     executor.start_polling(dp, skip_updates=True)

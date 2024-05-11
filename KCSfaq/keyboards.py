@@ -1,11 +1,20 @@
 from aiogram.types import ReplyKeyboardRemove, ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMarkup, InlineKeyboardButton
 
+menu_o_bote = InlineKeyboardMarkup(row_width=1)
+
+faq_b = InlineKeyboardButton(text="FAQ", callback_data="faq")
+help_b = InlineKeyboardButton(text="Помощь", callback_data="/help")
+
+menu_o_bote.add(faq_b,help_b)
+
 menu_kb2 = InlineKeyboardMarkup(row_width=1)
 
 channel_b = InlineKeyboardButton(text="Подписаться на канал разработчиков", url="https://t.me/KomaruCatStudios")
 bot_b = InlineKeyboardButton(text="Не нашли нужный вопрос?", url="http://t.me/KomaruStudios_bot")
+faq_b = InlineKeyboardButton(text="FAQ", callback_data="faq")
+about_b = InlineKeyboardButton(text="О боте", callback_data="О боте")
 
-menu_kb2.add(channel_b,bot_b)
+menu_kb2.add(channel_b,bot_b,faq_b,about_b)
 
 menu_kb3 = InlineKeyboardMarkup(row_width=3)
 
@@ -224,7 +233,7 @@ otv15_b = InlineKeyboardButton(text="15",callback_data="15")
 help_b = InlineKeyboardButton(text="Помощь", callback_data="/help")
 about_b = InlineKeyboardButton(text="О боте", callback_data="О боте")
 
-menu_otv9.add(otv1_b, otv2_b,otv3_b,otv4_b,otv5_b,otv6_b,otv7_b,otv9_b,otv10_b,otv11_b,otv12_b,otv13_b,otv14_b,otv15_b, help_b, about_b)
+menu_otv9.add(otv1_b, otv2_b,otv3_b,otv4_b,otv5_b,otv6_b,otv7_b,otv8_b,otv10_b,otv11_b,otv12_b,otv13_b,otv14_b,otv15_b, help_b, about_b)
 
 
 menu_otv10 = InlineKeyboardMarkup(row_width=2)
