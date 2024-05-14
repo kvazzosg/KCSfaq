@@ -28,91 +28,91 @@ async def otv4def(call: types.CallbackQuery):
 
 @dp.callback_query_handler(text="1")
 async def otv1def(call: types.CallbackQuery):
-    await call.message.answer(text=otv1, reply_markup=menu_otv1)
+    await call.message.answer(text=otv1, reply_markup=menu_kb)
     await call.answer()
     await bot.delete_message(chat_id=call.from_user.id, message_id=call.message.message_id)
 
 @dp.callback_query_handler(text="2")
 async def otv2def(call: types.CallbackQuery):
-    await call.message.answer(text=otv2, reply_markup=menu_otv2)
+    await call.message.answer(text=otv2, reply_markup=menu_kb)
     await call.answer()
     await bot.delete_message(chat_id=call.from_user.id, message_id=call.message.message_id)
 
 @dp.callback_query_handler(text="3")
 async def otv3def(call: types.CallbackQuery):
-    await bot.send_photo(chat_id=call.from_user.id, photo=InputFile("rofl.png"), caption=otv3, reply_markup=menu_otv3)
+    await bot.send_photo(chat_id=call.from_user.id, photo=InputFile("rofl.png"), caption=otv3, reply_markup=menu_kb)
     await call.answer()
     await bot.delete_message(chat_id=call.from_user.id, message_id=call.message.message_id)
 
 @dp.callback_query_handler(text="4")
 async def otv4def(call: types.CallbackQuery):
-    await call.message.answer(text=otv4, reply_markup=menu_otv4)
+    await call.message.answer(text=otv4, reply_markup=menu_kb)
     await call.answer()
     await bot.delete_message(chat_id=call.from_user.id, message_id=call.message.message_id)
 
 @dp.callback_query_handler(text="5")
 async def otv5def(call: types.CallbackQuery):
-    await call.message.answer(text=otv5, reply_markup=menu_otv5)
+    await call.message.answer(text=otv5, reply_markup=menu_kb)
     await call.answer()
     await bot.delete_message(chat_id=call.from_user.id, message_id=call.message.message_id)
 
 @dp.callback_query_handler(text="6")
 async def otv6def(call: types.CallbackQuery):
-    await call.message.answer(text=otv6, reply_markup=menu_otv6)
+    await call.message.answer(text=otv6, reply_markup=menu_kb)
     await call.answer()
     await bot.delete_message(chat_id=call.from_user.id, message_id=call.message.message_id)
 
 @dp.callback_query_handler(text="7")
 async def otv7def(call: types.CallbackQuery):
-    await call.message.answer(text=otv7, reply_markup=menu_otv7)
+    await call.message.answer(text=otv7, reply_markup=menu_kb)
     await call.answer()
     await bot.delete_message(chat_id=call.from_user.id, message_id=call.message.message_id)
 
 @dp.callback_query_handler(text="8")
 async def otv8def(call: types.CallbackQuery):
-    await call.message.answer(text=otv8, reply_markup=menu_otv8)
+    await call.message.answer(text=otv8, reply_markup=menu_kb)
     await call.answer()
     await bot.delete_message(chat_id=call.from_user.id, message_id=call.message.message_id)
 
 @dp.callback_query_handler(text="9")
 async def otv9def(call: types.CallbackQuery):
-    await call.message.answer(text=otv9, reply_markup=menu_otv9)
+    await call.message.answer(text=otv9, reply_markup=menu_kb)
     await call.answer()
     await bot.delete_message(chat_id=call.from_user.id, message_id=call.message.message_id)
 
 @dp.callback_query_handler(text="10")
 async def otv10def(call: types.CallbackQuery):
-    await call.message.answer(text=otv10, reply_markup=menu_otv10)
+    await call.message.answer(text=otv10, reply_markup=menu_kb)
     await call.answer()
     await bot.delete_message(chat_id=call.from_user.id, message_id=call.message.message_id)
 
 @dp.callback_query_handler(text="11")
 async def otv11def(call: types.CallbackQuery):
-    await call.message.answer(text=otv11, reply_markup=menu_otv11)
+    await call.message.answer(text=otv11, reply_markup=menu_kb)
     await call.answer()
     await bot.delete_message(chat_id=call.from_user.id, message_id=call.message.message_id)
 
 @dp.callback_query_handler(text="12")
 async def otv12def(call: types.CallbackQuery):
-    await call.message.answer(text=otv12, reply_markup=menu_otv12)
+    await call.message.answer(text=otv12, reply_markup=menu_kb)
     await call.answer()
     await bot.delete_message(chat_id=call.from_user.id, message_id=call.message.message_id)
 
 @dp.callback_query_handler(text="13")
 async def otv13def(call: types.CallbackQuery):
-    await call.message.answer(text=otv13, reply_markup=menu_otv13)
+    await call.message.answer(text=otv13, reply_markup=menu_kb)
     await call.answer()
     await bot.delete_message(chat_id=call.from_user.id, message_id=call.message.message_id)
 
 @dp.callback_query_handler(text="14")
 async def otv14def(call: types.CallbackQuery):
-    await bot.send_photo(chat_id=call.from_user.id, photo=InputFile("logo_otv14.png"), caption=otv14, reply_markup=menu_otv14)
+    await bot.send_photo(chat_id=call.from_user.id, photo=InputFile("logo_otv14.png"), caption=otv14, reply_markup=menu_kb)
     await call.answer()
     await bot.delete_message(chat_id=call.from_user.id, message_id=call.message.message_id)
 
 @dp.callback_query_handler(text="15")
 async def otv15def(call: types.CallbackQuery):
-    await call.message.answer(text=otv15, reply_markup=menu_otv15)
+    await call.message.answer(text=otv15, reply_markup=menu_kb)
     await call.answer()
     await bot.delete_message(chat_id=call.from_user.id, message_id=call.message.message_id)
 
