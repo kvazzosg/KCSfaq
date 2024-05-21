@@ -8,12 +8,6 @@ import time
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher(bot=bot)
-startpic = InputFile("KCSlogo.png")
-voprospic = InputFile("chast_vopros.png")
-skrinpic = InputFile("rofl.png")
-pomoshpic = InputFile("pomosh.png")
-o_botepic = InputFile("o_bote.png")
-otvpic = InputFile("logo_otv14.png")
 
 @dp.message_handler(commands="start")
 async def hello(msg:types.Message):
@@ -40,7 +34,7 @@ async def otv2def(call: types.CallbackQuery):
 
 @dp.callback_query_handler(text="3")
 async def otv3def(call: types.CallbackQuery):
-    await bot.send_photo(chat_id=call.from_user.id, photo=InputFile("rofl.png"), caption=otv3, reply_markup=menu_kb)
+    await bot.send_photo(chat_id=call.from_user.id, photo=InputFile("screenshot1.png"), caption=otv3, reply_markup=menu_kb)
     await call.answer()
     await bot.delete_message(chat_id=call.from_user.id, message_id=call.message.message_id)
 
